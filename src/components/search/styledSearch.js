@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import border from "../styld/border"
+
 export const SearchWarp = border({
     Comp:styled.div`
         padding:.1rem .15rem;

@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 
 
 const mapState=state=>({
-  list:state.list
+  list:state.home.list
 })
  class Swiper extends Component {
   render() {

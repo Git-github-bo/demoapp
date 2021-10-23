@@ -10,7 +10,7 @@ import locationActive from 'assets/location-active.png'
 import more from 'assets/more.png'
 import moreActive from 'assets/more-active.png'
 
-import Cookbook from './cookbook/Cookbook'
+import Cookbook from "./index"
 
 export default class Layout extends Component {
   constructor(props) {
