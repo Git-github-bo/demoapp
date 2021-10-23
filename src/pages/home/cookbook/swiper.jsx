@@ -5,11 +5,23 @@ import {SwiperWrap} from "./styledCookbook"
 
 import { connect } from 'react-redux'
 
-
+import {GETLIST} from "../action-types"
 const mapState=state=>({
   list:state.home.list
 })
+
+const mapDispatch=dispatch=>({
+    loadData(){
+      dispatch({
+        type:GETLIST,
+        url:'/api/list'
+      })
+    }
+})
  class Swiper extends Component {
+   componentDidMount(){
+     this.props.loadData()
+   }
   render() {
     return (
         <SwiperWrap>
@@ -27,4 +39,4 @@ const mapState=state=>({
     )
   }
 }
-export default connect(mapState)(Swiper)
+export default connect(mapState,mapDispatch)(Swiper)

@@ -17,7 +17,7 @@ export default class HotCate extends Component {
             url:"/api/hotcate"
         })
 
-        let data=result.map((value)=>({
+        let data = result.map((value)=>({
             key:value.id,
             title:value.title,
             icon:value.img
