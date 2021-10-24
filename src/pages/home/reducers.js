@@ -7,19 +7,19 @@ const defaultState = {
 }
 
 export default (state=defaultState, action) => {
-  switch(action.type) {
-    case LOADDATA:
-      return {
-        ...state,
-        list: action.data
-      }
-      case SETSHOW:
-        return{
+    switch(action.type) {
+      case LOADDATA:
+        return {
           ...state,
-          isShow:action.data
+          list: action.data
         }
-    
-    default:
-      return state
+        case SETSHOW:
+          return{
+            ...state,
+            isShow:action.data
+          }
+      
+      default:
+        return state
+    }
   }
-}

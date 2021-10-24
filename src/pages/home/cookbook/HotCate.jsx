@@ -32,7 +32,7 @@ export default class HotCate extends Component {
     _renderItem= dataItem=>(
         <div className='item'>
             {
-                dataItem.icon && <img src={dataItem.icon}/>
+                dataItem.icon && <img src={dataItem.icon} alt=""/>
             }
             <span>{ dataItem.title}</span>
         </div>
