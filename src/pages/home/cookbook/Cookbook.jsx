@@ -3,6 +3,7 @@ import Header from './Header'
 import HotCate from './HotCate'
 import Swiper from "./swiper"
 import Search from "@/search/Search"
+import HotList from "./hotlist"
 export default class Cookbook extends Component {
   render() {
     return (
@@ -11,6 +12,7 @@ export default class Cookbook extends Component {
         <Swiper/>
         <Search/>
         <HotCate/>
+        <HotList/>
       </div>
     )
   }

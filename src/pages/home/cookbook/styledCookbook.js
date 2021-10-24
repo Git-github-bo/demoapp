@@ -37,3 +37,34 @@ export const HotCateWrap = styled.div`
           }
       }
 `
+export const HotListWrap = styled.div`
+        padding:0 .2rem .2rem .2rem;
+        header{
+          color:#666;
+        }
+        div{
+          display:flex;
+          flex-wrap:wrap;
+        figure{
+          width:40%;
+          margin:1em 15px;
+          img{
+            width:100%; 
+          }
+          &:nth-child(odd){
+            padding-right:.05rem;
+          }
+          &:nth-child(odd){
+            padding-left:.05rem;
+          }
+          figcaption{
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+            height:.6rem
+          }
+        }
+      }
+
+`
