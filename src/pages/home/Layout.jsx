@@ -9,14 +9,18 @@ import location from 'assets/location.png'
 import locationActive from 'assets/location-active.png'
 import more from 'assets/more.png'
 import moreActive from 'assets/more-active.png'
+// import Category from './catgory/Category'
+import { Cookbook,Category }  from "./index"
 
-import { Cookbook }  from "./index"
+
+
+
 
 export default class Layout extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTab: 'cookbook',
+      selectedTab: 'category',
       hidden: false,
       fullScreen: true,
     };
@@ -72,17 +76,17 @@ export default class Layout extends Component {
               />
             }
             title="分类"
-            key="menu"
+            key="category"
             
-            selected={this.state.selectedTab === 'menu'}
+            selected={this.state.selectedTab === 'category'}
             onPress={() => {
               this.setState({
-                selectedTab: 'menu',
+                selectedTab: 'category',
               });
             }}
            
           >
-           
+           <Category/>
           </TabBar.Item>
           <TabBar.Item
             icon={
