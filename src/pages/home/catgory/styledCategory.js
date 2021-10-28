@@ -37,7 +37,10 @@ export const HeaderWrap = styled.div`
         &.active{   
             color:#ee742f;
         }
-
     }
 
+`
+export const CateWrap = styled.div`
+    height:100%;
+    overflow:hidden;
 `
