@@ -1,25 +1,29 @@
 import React, { Component } from 'react'
 import {HeaderWrap} from "./styledCategory"
-export default class Header extends Component {
+import { withRouter } from "react-router-dom"
+
+class Header extends Component {
   state={
-    dir:"left"
+    dir:"category"
   }
   hanleClick=dir=>{
     return ()=>{
       this.setState({
         dir
       })
+      this.props.history.push(`/${dir}`)
     }
   }
   render() {
     return (
       <HeaderWrap>
         <ul>
-          <li onClick={this.hanleClick("left")}  className={this.state.dir==="left"?"active":""}>分类</li>
-          <li onClick={this.hanleClick("right")} className="active" className= {this.state.dir==="right"?"active":""}>食材</li>
-          <li className={`silder ${this.state.dir==="right"?"right":""}`}></li>
+          <li onClick={this.hanleClick("category")}  className={this.state.dir==="category"?"active":""}>分类</li>
+          <li onClick={this.hanleClick("material")} className="active" className= {this.state.dir==="material"?"active":""}>食材</li>
+          <li className={`silder ${this.state.dir==="material"?"right":""}`}></li>
         </ul>
       </HeaderWrap>
     )
   }
 }
+export default withRouter(Header)

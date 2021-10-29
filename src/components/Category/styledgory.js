@@ -34,6 +34,7 @@ export const CateWrap=styled.div`
             flex-wrap:wrap;
             overflow-y:scroll;
             height:100%;
+            align-content:flex-start;
             li{
                 width:33.333%;
                 text-align:center;
@@ -42,8 +43,7 @@ export const CateWrap=styled.div`
                 color:#666;
             }
         }   
-    }
-    
+    }    
     `
 
 
