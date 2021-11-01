@@ -2,9 +2,12 @@ import Cookbook from "./cookbook/Cookbook"
 import Category from "./catgory/Category"
 import reducers from "./reducers"
 import * as sagas from "./sagas"
+import Map from "./map/Map.jsx"
+
 export {
     Cookbook,
+    Category,
     reducers,
-    sagas,
-    Category
+    sagas, 
+    Map
 }

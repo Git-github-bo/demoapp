@@ -10,7 +10,7 @@ import locationActive from 'assets/location-active.png'
 import more from 'assets/more.png'
 import moreActive from 'assets/more-active.png'
 // import Category from './catgory/Category'
-import { Cookbook,Category }  from "./index"
+import { Cookbook,Category,Map}  from "./index"
 
 
 
@@ -103,7 +103,7 @@ export default class Layout extends Component {
                 background: `url(${locationActive}) center center /  21px 21px no-repeat` }}
               />
             }
-            title="地图"
+            title="美食地图"
             key="map"
             selected={this.state.selectedTab === 'map'}
             onPress={() => {
@@ -112,12 +112,12 @@ export default class Layout extends Component {
               });
             }}
           >
-           
+           <Map/>
           </TabBar.Item>
           <TabBar.Item
             icon={{ uri: more}}
             selectedIcon={{ uri: moreActive }}
-            title="我的"
+            title="更多"
             key="more"
             selected={this.state.selectedTab === 'more'}
             onPress={() => {
